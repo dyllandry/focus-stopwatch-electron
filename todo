@@ -1,0 +1,56 @@
+☐ design timer logic in react components & state
+  1) Functions have to be written in TypeScript
+  2) Functions will be inside react components
+  3) Tests will be written using Jest
+
+  <FocusStopwatch />
+    state
+      sessionsByType
+      currentSessionType
+      paused
+
+  <SessionTotals />
+    This is the two boxes at the top of the window showing the total time spent in both session types.
+    props
+      sessionsByType
+      currentSessionType - For session labels.
+      paused - For session labels.
+
+  <SessionTypeTotal />
+    props
+      sessions
+      currentSessionType
+
+
+  <SessionTypeName />
+    This will show the name of the session type and its state like "Focus (Active)"
+    state
+    props
+      currentSessionType
+      paused
+
+  <Duration />
+    This will just format nicely a time that it is given as 00:00:00
+    props
+      durationInMs
+
+  <FocusStopwatchControls />
+    This will have some inputs like
+      Start Focus
+      Start Rest
+      Pause
+    props
+      handleStartFocusPress - These will be functions passed down by parent component <FocusStopwatch /> that will modify the stopwatch's state.
+      handleStartRestPress
+      handlePausePress
+
+  <StartSessionTypeButton />
+    The parent component <FocusStopwatchControls /> will not show the <StartSessionTypeButton /> if that session type is already active.
+    props
+      sessionType
+      handleStartSessionTypePress - This will be one of handleStartRestPress or handleStartFocusPress passed from <FocusStopwatchControls />
+
+  <PauseButton />
+    props
+      handlePausePress
+
