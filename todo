@@ -1,5 +1,24 @@
 todo now:
-  ✔ design timer logic in react components & state @done(22-08-21 12:23)
+  ✔ <FocusStopwatch /> @done(22-08-21 15:04)
+    ✔ implement state @done(22-08-21 13:02)
+      ✔ sessionsByType @done(22-08-21 13:02)
+      ✔ currentSessionType @done(22-08-21 13:02)
+      ✔ paused @done(22-08-21 13:02)
+  ✔ add barebone ui components so that I can start writing tests @done(22-08-21 15:01)
+    ✔ <SessionTotals /> @done(22-08-21 15:01)
+      ✔ basic ui, test if renders @done(22-08-21 13:12)
+      ✔ props @done(22-08-21 13:12)
+      ✔ <SessionTypeTotal /> @done(22-08-21 15:01)
+        ✔ basic ui, test if renders @done(22-08-21 15:01)
+        ✔ props @done(22-08-21 15:01)
+        ✔ design timer logic in react components & state @done(22-08-21 12:23)
+  ☐ style <SessionTypeTotal />
+  ☐ add test that <SessionTypeTotal /> displays each session type's text in the label
+    Goal is to test that it works for all session types.
+  ☐ show two <SessionTypeTotal /> in <SessionTotals />
+  ☐ add test that <SessionTotals /> shows <SessionTypeTotal /> for all session types
+
+  Heres an implementation plan
     1) Functions have to be written in TypeScript
     2) Functions will be inside react components
     3) Tests will be written using Jest
@@ -54,18 +73,6 @@ todo now:
     <PauseButton />
       props
         handlePausePress
-  ☐ implement <FocusStopwatch />
-    ✔ implement state @done(22-08-21 13:02)
-      ✔ sessionsByType @done(22-08-21 13:02)
-      ✔ currentSessionType @done(22-08-21 13:02)
-      ✔ paused @done(22-08-21 13:02)
-    ✔ add barebone ui components so that I can start writing tests @done(22-08-21 15:01)
-      ✔ <SessionTotals /> @done(22-08-21 15:01)
-        ✔ basic ui, test if renders @done(22-08-21 13:12)
-        ✔ props @done(22-08-21 13:12)
-        ✔ <SessionTypeTotal /> @done(22-08-21 15:01)
-          ✔ basic ui, test if renders @done(22-08-21 15:01)
-          ✔ props @done(22-08-21 15:01)
 
 todo later:
   swap out useState for redux-toolkit
