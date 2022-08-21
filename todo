@@ -1,4 +1,4 @@
-☐ design timer logic in react components & state
+✔ design timer logic in react components & state @done(22-08-21 12:23)
   1) Functions have to be written in TypeScript
   2) Functions will be inside react components
   3) Tests will be written using Jest
@@ -53,4 +53,16 @@
   <PauseButton />
     props
       handlePausePress
+☐ implement <FocusStopwatch />
+  ✔ implement state @done(22-08-21 13:02)
+    ✔ sessionsByType @done(22-08-21 13:02)
+    ✔ currentSessionType @done(22-08-21 13:02)
+    ✔ paused @done(22-08-21 13:02)
+  ☐ add barebone ui components so that I can start writing tests
+    ☐ <SessionTotals />
+      ☐ basic ui, test if renders
+      ☐ props
+      ☐ <SessionTypeTotal />
+        ☐ basic ui, test if renders
+        ☐ props
 
