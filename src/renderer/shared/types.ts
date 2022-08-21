@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/prefer-default-export
 export enum SessionType {
-  Rest,
-  Focus,
+  Rest = 'rest',
+  Focus = 'focus',
 }
 
 export type Session = {

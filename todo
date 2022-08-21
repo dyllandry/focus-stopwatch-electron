@@ -1,68 +1,71 @@
-✔ design timer logic in react components & state @done(22-08-21 12:23)
-  1) Functions have to be written in TypeScript
-  2) Functions will be inside react components
-  3) Tests will be written using Jest
+todo now:
+  ✔ design timer logic in react components & state @done(22-08-21 12:23)
+    1) Functions have to be written in TypeScript
+    2) Functions will be inside react components
+    3) Tests will be written using Jest
 
-  <FocusStopwatch />
-    state
-      sessionsByType
-      currentSessionType
-      paused
+    <FocusStopwatch />
+      state
+        sessionsByType
+        currentSessionType
+        paused
 
-  <SessionTotals />
-    This is the two boxes at the top of the window showing the total time spent in both session types.
-    props
-      sessionsByType
-      currentSessionType - For session labels.
-      paused - For session labels.
+    <SessionTotals />
+      This is the two boxes at the top of the window showing the total time spent in both session types.
+      props
+        sessionsByType
+        currentSessionType - For session labels.
+        paused - For session labels.
 
-  <SessionTypeTotal />
-    props
-      sessions
-      currentSessionType
+    <SessionTypeTotal />
+      props
+        sessions
+        currentSessionType
 
 
-  <SessionTypeName />
-    This will show the name of the session type and its state like "Focus (Active)"
-    state
-    props
-      currentSessionType
-      paused
+    <SessionTypeName />
+      This will show the name of the session type and its state like "Focus (Active)"
+      state
+      props
+        currentSessionType
+        paused
 
-  <Duration />
-    This will just format nicely a time that it is given as 00:00:00
-    props
-      durationInMs
+    <Duration />
+      This will just format nicely a time that it is given as 00:00:00
+      props
+        durationInMs
 
-  <FocusStopwatchControls />
-    This will have some inputs like
-      Start Focus
-      Start Rest
-      Pause
-    props
-      handleStartFocusPress - These will be functions passed down by parent component <FocusStopwatch /> that will modify the stopwatch's state.
-      handleStartRestPress
-      handlePausePress
+    <FocusStopwatchControls />
+      This will have some inputs like
+        Start Focus
+        Start Rest
+        Pause
+      props
+        handleStartFocusPress - These will be functions passed down by parent component <FocusStopwatch /> that will modify the stopwatch's state.
+        handleStartRestPress
+        handlePausePress
 
-  <StartSessionTypeButton />
-    The parent component <FocusStopwatchControls /> will not show the <StartSessionTypeButton /> if that session type is already active.
-    props
-      sessionType
-      handleStartSessionTypePress - This will be one of handleStartRestPress or handleStartFocusPress passed from <FocusStopwatchControls />
+    <StartSessionTypeButton />
+      The parent component <FocusStopwatchControls /> will not show the <StartSessionTypeButton /> if that session type is already active.
+      props
+        sessionType
+        handleStartSessionTypePress - This will be one of handleStartRestPress or handleStartFocusPress passed from <FocusStopwatchControls />
 
-  <PauseButton />
-    props
-      handlePausePress
-☐ implement <FocusStopwatch />
-  ✔ implement state @done(22-08-21 13:02)
-    ✔ sessionsByType @done(22-08-21 13:02)
-    ✔ currentSessionType @done(22-08-21 13:02)
-    ✔ paused @done(22-08-21 13:02)
-  ☐ add barebone ui components so that I can start writing tests
-    ☐ <SessionTotals />
-      ☐ basic ui, test if renders
-      ☐ props
-      ☐ <SessionTypeTotal />
-        ☐ basic ui, test if renders
-        ☐ props
+    <PauseButton />
+      props
+        handlePausePress
+  ☐ implement <FocusStopwatch />
+    ✔ implement state @done(22-08-21 13:02)
+      ✔ sessionsByType @done(22-08-21 13:02)
+      ✔ currentSessionType @done(22-08-21 13:02)
+      ✔ paused @done(22-08-21 13:02)
+    ✔ add barebone ui components so that I can start writing tests @done(22-08-21 15:01)
+      ✔ <SessionTotals /> @done(22-08-21 15:01)
+        ✔ basic ui, test if renders @done(22-08-21 13:12)
+        ✔ props @done(22-08-21 13:12)
+        ✔ <SessionTypeTotal /> @done(22-08-21 15:01)
+          ✔ basic ui, test if renders @done(22-08-21 15:01)
+          ✔ props @done(22-08-21 15:01)
 
+todo later:
+  swap out useState for redux-toolkit
