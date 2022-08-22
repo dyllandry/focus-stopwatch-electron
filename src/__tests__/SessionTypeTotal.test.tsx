@@ -16,7 +16,7 @@ describe('SessionTypeTotal', () => {
     ).toBeTruthy();
   });
 
-  it('shows current session type total ms', () => {
+  it('shows current session type total duration in milliseconds', () => {
     const currentSessionType = SessionType.Focus;
     const sessionStart = new Date('2000-01-01T00:00:00');
     const sessionEnd = new Date('2000-01-01T00:00:30');
@@ -35,5 +35,20 @@ describe('SessionTypeTotal', () => {
     });
 
     expect(sessionTypeTotal).toHaveTextContent(sessionDurationMs.toString());
+  });
+
+  describe('session type label', () => {
+    it.each(Object.values(SessionType))('can show %p', (sessionType) => {
+      render(
+        <SessionTypeTotal
+          sessions={[]}
+          currentSessionType={sessionType}
+          paused={false}
+        />
+      );
+
+      const sessionTypeTotal = screen.getByText(`${sessionType} session total`);
+      expect(sessionTypeTotal).toBeTruthy();
+    });
   });
 });
