@@ -22,7 +22,7 @@ const SessionTypeTotal = (props: {
 
   return (
     <div>
-      <span id={sessionTypeTotalLabelId}>
+      <span id={sessionTypeTotalLabelId} style={{ marginRight: 8 }}>
         {`${currentSessionType} session total`}
       </span>
       <span role="timer" aria-labelledby={sessionTypeTotalLabelId}>
