@@ -9,4 +9,8 @@ export type Session = {
   end: Date;
 };
 
-export type SessionsByType = Record<SessionType, Session[]>;
+export type SessionsByType = {
+  // The ? means that not every key of SessionType has to be in every SessionsByType object.
+  // So you could have just { SessionType.Rest: [] } and not need to have a SessionType.Focus key
+  [sessionType in SessionType]?: Session[];
+};

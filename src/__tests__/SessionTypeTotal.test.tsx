@@ -9,6 +9,7 @@ describe('SessionTypeTotal', () => {
       render(
         <SessionTypeTotal
           sessions={[]}
+          sessionType={SessionType.Focus}
           currentSessionType={SessionType.Focus}
           paused={false}
         />
@@ -16,7 +17,7 @@ describe('SessionTypeTotal', () => {
     ).toBeTruthy();
   });
 
-  it('shows current session type total duration in milliseconds', () => {
+  it('shows the session type total duration in milliseconds', () => {
     const currentSessionType = SessionType.Focus;
     const sessionStart = new Date('2000-01-01T00:00:00');
     const sessionEnd = new Date('2000-01-01T00:00:30');
@@ -25,7 +26,8 @@ describe('SessionTypeTotal', () => {
     render(
       <SessionTypeTotal
         sessions={[{ start: sessionStart, end: sessionEnd }]}
-        currentSessionType={currentSessionType}
+        sessionType={currentSessionType}
+        currentSessionType={SessionType.Focus}
         paused={false}
       />
     );
@@ -42,7 +44,8 @@ describe('SessionTypeTotal', () => {
       render(
         <SessionTypeTotal
           sessions={[]}
-          currentSessionType={sessionType}
+          sessionType={sessionType}
+          currentSessionType={SessionType.Focus}
           paused={false}
         />
       );

@@ -6,16 +6,17 @@ const SessionTotals = (props: {
   currentSessionType: SessionType;
   paused: boolean;
 }) => {
-  const { sessionsByType, currentSessionType, paused } = props;
-  return (
-    <div>
-      <SessionTypeTotal
-        sessions={sessionsByType[currentSessionType]}
-        currentSessionType={currentSessionType}
-        paused={paused}
-      />
-    </div>
-  );
+  const passedSessionTypes = Object.keys(props.sessionsByType) as SessionType[];
+  const sessionTypeTotals = passedSessionTypes.map((sessionType) => (
+    <SessionTypeTotal
+      key={sessionType}
+      sessions={props.sessionsByType[sessionType]}
+      sessionType={sessionType}
+      currentSessionType={props.currentSessionType}
+      paused={props.paused}
+    />
+  ));
+  return <div>{sessionTypeTotals}</div>;
 };
 
 export default SessionTotals;

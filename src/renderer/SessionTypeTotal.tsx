@@ -1,15 +1,17 @@
 import { Session, SessionType } from './shared/types';
 
 const SessionTypeTotal = (props: {
-  sessions: Session[];
+  sessions?: Session[];
+  sessionType: SessionType;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, react/no-unused-prop-types
   currentSessionType: SessionType;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, react/no-unused-prop-types
   paused: boolean;
 }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const { sessions, currentSessionType, paused } = props;
 
-  const sessionsDurationTotal = sessions.reduce<number>(
+  const sessionsDurationTotal = props.sessions.reduce(
     (totalMs: number, session: Session) => {
       const sessionEnd = session.end || Date.now();
       const sessionDurationMs = sessionEnd.getTime() - session.start.getTime();
@@ -18,12 +20,12 @@ const SessionTypeTotal = (props: {
     0
   );
 
-  const sessionTypeTotalLabelId = `${currentSessionType}-label`;
+  const sessionTypeTotalLabelId = `${props.sessionType}-label`;
 
   return (
     <div>
       <span id={sessionTypeTotalLabelId} style={{ marginRight: 8 }}>
-        {`${currentSessionType} session total`}
+        {`${props.sessionType} session total`}
       </span>
       <span role="timer" aria-labelledby={sessionTypeTotalLabelId}>
         {sessionsDurationTotal}

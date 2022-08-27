@@ -14,8 +14,8 @@ todo now:
         ✔ design timer logic in react components & state @done(22-08-21 12:23)
   ✔ style <SessionTypeTotal /> @started(22-08-22 17:37) @done(22-08-22 17:41) @lasted(4m16s)
   ✔ add test that <SessionTypeTotal /> displays each session type's text in the label @done(22-08-22 18:02)
-  ☐ show two <SessionTypeTotal /> in <SessionTotals />
-  ☐ add test that <SessionTotals /> shows <SessionTypeTotal /> for all session types
+  ✔ show two <SessionTypeTotal /> in <SessionTotals /> @done(22-08-27 13:45)
+  ✔ add test that <SessionTotals /> shows <SessionTypeTotal /> for all session types @done(22-08-27 13:45)
 
   Heres an implementation plan
     1) Functions have to be written in TypeScript
