@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import FocusStopwatchControls from './FocusStopwatchControls';
 import SessionTotals from './SessionTotals';
 import { SessionsByType, SessionType } from './shared/types';
 
@@ -18,6 +19,7 @@ const FocusStopwatch = () => {
         currentSessionType={currentSessionType}
         paused={paused}
       />
+      <FocusStopwatchControls />
     </div>
   );
 };

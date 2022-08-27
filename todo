@@ -16,6 +16,11 @@ todo now:
   ✔ add test that <SessionTypeTotal /> displays each session type's text in the label @done(22-08-22 18:02)
   ✔ show two <SessionTypeTotal /> in <SessionTotals /> @done(22-08-27 13:45)
   ✔ add test that <SessionTotals /> shows <SessionTypeTotal /> for all session types @done(22-08-27 13:45)
+  ✔ add component <FocusStopwatchControls /> @done(22-08-27 19:35)
+  ☐ add start session button
+    ☐ start session logic
+    ☐ start session button
+    ☐ test
 
   Heres an implementation plan
     1) Functions have to be written in TypeScript
