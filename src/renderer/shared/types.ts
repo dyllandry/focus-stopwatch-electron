@@ -6,7 +6,7 @@ export enum SessionType {
 
 export type Session = {
   start: Date;
-  end: Date;
+  end: Date | null;
 };
 
 export type SessionsByType = {

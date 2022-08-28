@@ -13,7 +13,7 @@ const SessionTypeTotal = (props: {
 
   const sessionsDurationTotal = props.sessions.reduce(
     (totalMs: number, session: Session) => {
-      const sessionEnd = session.end || Date.now();
+      const sessionEnd = session.end || new Date();
       const sessionDurationMs = sessionEnd.getTime() - session.start.getTime();
       return totalMs + sessionDurationMs;
     },

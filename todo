@@ -17,6 +17,18 @@ todo now:
   ✔ show two <SessionTypeTotal /> in <SessionTotals /> @done(22-08-27 13:45)
   ✔ add test that <SessionTotals /> shows <SessionTypeTotal /> for all session types @done(22-08-27 13:45)
   ✔ add component <FocusStopwatchControls /> @done(22-08-27 19:35)
+  Maybe I should move over to redux because if it lets me write my stopwatch logic outside of any react component, then I could write tests for it outside of any rendering. Then have other dedicate tests for rendering stuff.
+  redux store
+    ✔ add store, slice, reducer boiler @done(22-08-27 22:57)
+    ☐ test that store starts with session types empty
+    startSession tests:
+      ☐ test that it adds a new session type list if one didn't exist
+      ☐ test that it adds a new session if one didn't exist
+        make sure length of sessions only increased by 1
+      ☐ test that it adds a new session to the right session type
+        test adding works to session type that is already current
+        test adding works to different session type than is already current
+      ☐ test that the newly added session type doesn't have an end time
   ☐ add start session button
     ☐ start session logic
     ☐ start session button
